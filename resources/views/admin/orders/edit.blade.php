@@ -14,13 +14,14 @@
     <br>
 
 
-    {!! Form::model($order, ['route'=>['admin.categories.update', $order->id]]) !!}
+    {!! Form::model($order, ['route'=>['admin.orders.update', $order->id]]) !!}
 
     <div class="form-group">
         {!! Form::label('Status', 'Status:') !!}
         {!! Form::select('status', $list_status, null,['class'=>'form-control']) !!}
     </div>
 
+    {!! csrf_field() !!}
 
     <div class="form-group">
         {!! Form::label('Entregador', 'Entregador:') !!}

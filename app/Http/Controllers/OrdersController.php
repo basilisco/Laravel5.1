@@ -45,7 +45,8 @@ class OrdersController extends Controller
         $list_status = [
             0=>'Pendente',
             1=>'A caminho',
-            2=>'Entregue'
+            2=>'Entregue',
+            3=>'Cancelado',
         ];
 
         $deliveryman = $userRepository->getDeliveryman();
@@ -57,9 +58,9 @@ class OrdersController extends Controller
     public function update(Request $request, $id)
     {
         $all = $request->all();
-        $this->Repository->update($all, $id);
+        $this->repository->update($all, $id);
 
-        return redirect('admin.orders.index');
+        return redirect()->route('admin.orders.index');
     }
 
 }
