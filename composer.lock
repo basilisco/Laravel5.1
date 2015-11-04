@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "307b98cdd9031ecd5e12abdfa9540f1d",
+    "content-hash": "6a937c28834190a157bf0e4f953047f7",
     "packages": [
         {
             "name": "bestmomo/scafold",

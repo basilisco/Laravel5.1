@@ -38,6 +38,12 @@ Route::group(['prefix'=>'admin','middleware'=>'auth.checkrole' ,'as'=>'admin.'],
     Route::get('/cupoms/create', ['as'=>'cupoms.create','uses'=>'CupomsController@create']);
     Route::get('/cupoms/{id}', ['as'=>'cupoms.edit','uses'=>'CupomsController@edit']);
     Route::post('/cupoms/store', ['as'=>'cupoms.store','uses'=>'CupomsController@store']);
+});
+
+Route::group(['prefix'=>'customer', 'as'=>'customer.'], function(){
+    Route::get('order', ['as'=>'order.index', 'uses'=>'CheckoutController@index']);
+    Route::get('order/create', ['as'=>'order.create', 'uses'=>'CheckoutController@create']);
+    Route::post('order/store', ['as'=>'order.store', 'uses'=>'CheckoutController@store']);
 
 });
 
